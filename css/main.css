@@ -57,7 +57,7 @@ body {
 .b-center-block {
   position: absolute;
   top: 7.22222%;
-  width: 50.26042%;
+  right: 28.64583%;
   left: 24.21875%; }
   @media screen and (max-width: 768px) {
     .b-center-block {
@@ -237,7 +237,7 @@ body {
 
 .small-text {
   font-family: "Ukrainian", sans-serif;
-  font-size: 0.52vw; }
+  font-size: 1.52vh; }
   @media screen and (max-width: 768px) {
     .small-text {
       font-size: 3.13vw;
