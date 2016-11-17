@@ -22,15 +22,15 @@ body {
 .b-left-block {
   position: absolute;
   width: 24.21875%;
-  top: 50px;
-  bottom: 50px; }
+  top: 4.62963%;
+  left: -2%; }
   @media screen and (max-width: 768px) {
     .b-left-block {
       left: -19%;
       top: 10%;
       width: 40%; } }
   .b-left-block__tree {
-    width: 100%; }
+    width: 110%; }
 
 .b-right-block {
   position: absolute;
@@ -112,9 +112,12 @@ body {
     width: 33.33333%;
     padding-left: 30.30303%;
     z-index: 2; }
+    @media screen and (max-width: 768px) {
+      .b-steps__img {
+        padding-left: 33.33333%; } }
     .b-steps__img--wider {
       width: 55.3125%;
-      padding-left: 18.75%; }
+      padding-left: 23.07692%; }
     .b-steps__img--background {
       position: absolute;
       z-index: 5;
@@ -204,6 +207,7 @@ body {
   vertical-align: top;
   margin: 0;
   font-family: "Ukrainian", sans-serif;
+  font-weight: bold;
   color: #21285d;
   font-size: 2.19vw;
   padding-left: 10%; }
@@ -238,7 +242,8 @@ body {
     .small-text {
       font-size: 3.13vw;
       line-height: 6.25vw;
-      text-align: center; } }
+      text-align: center;
+      margin: 5%; } }
 
 .desktop-hidden {
   display: block; }

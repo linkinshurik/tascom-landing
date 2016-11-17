@@ -22,15 +22,25 @@ body
 .b-left-block
   position: absolute
   width: 100/1920*465*1%
-  top: 50px
-  bottom: 50px
+  top: 100/1080*50*1%
+  left: -2%
+  //@media screen and (max-width: 1320px)
+  //  left: -2%
+  //@media screen and (max-width: 1220px)
+  //  left: -7%
+  //@media screen and (max-width: 1120px)
+  //  left: -9%
+  //@media screen and (max-width: 1020px)
+  //  left: -11%
+  //@media screen and (max-width: 920px)
+  //  left: -13%
   @media screen and (max-width: $break-small)
     left: -19%
     top: 10%
     width: 40%
 
   &__tree
-    width: 100%
+    width: 110%
 
 .b-right-block
   position: absolute
@@ -109,9 +119,11 @@ body
     width: 100/300*100*1%
     padding-left: 100/330*100*1%
     z-index: 2
+    @media screen and (max-width: $break-small)
+      padding-left: 100/300*100*1%
     &--wider
       width: 100/320*177*1%
-      padding-left: 100/320*60*1%
+      padding-left: 100/260*60*1%
 
     &--background
       position: absolute
@@ -199,6 +211,7 @@ body
     vertical-align: top
     margin: 0
     font-family: "Ukrainian", sans-serif
+    font-weight: bold
     color: #21285d
     font-size: 2.19vw
     padding-left: 100/300*30*1%
@@ -229,6 +242,7 @@ body
     font-size: 3.13vw
     line-height: 6.25vw
     text-align: center
+    margin: 5%
 
 .desktop-hidden
   display: block
