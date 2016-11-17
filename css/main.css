@@ -21,16 +21,23 @@ body {
 
 .b-left-block {
   position: absolute;
-  width: 24.21875%;
-  top: 4.62963%;
+  width: 24.21%;
+  bottom: 4.62%;
+  top: 4%;
   left: -2%; }
   @media screen and (max-width: 768px) {
     .b-left-block {
       left: -19%;
-      top: 10%;
-      width: 40%; } }
+      top: 5%;
+      width: 49%;
+      bottom: auto;
+      padding-top: 100%; } }
   .b-left-block__tree {
-    width: 110%; }
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0; }
 
 .b-right-block {
   position: absolute;
@@ -56,12 +63,13 @@ body {
 
 .b-center-block {
   position: absolute;
-  top: 7.22222%;
+  top: 20%;
   right: 28.64583%;
   left: 24.21875%; }
   @media screen and (max-width: 768px) {
     .b-center-block {
       top: 26%;
+      padding-top: 11%;
       position: relative;
       left: 10%;
       width: 80%;
@@ -79,11 +87,13 @@ body {
   text-align: center;
   font-family: "Ukrainian", sans-serif;
   font-size: 2.66vw;
-  margin-top: 0; }
+  margin: 0;
+  padding-top: 61px; }
   @media screen and (max-width: 768px) {
     .header-text {
       font-size: 7.1vw;
-      padding-top: 20%; } }
+      padding-top: 20%;
+      position: relative; } }
 
 .b-steps {
   overflow: auto;
@@ -122,7 +132,7 @@ body {
       position: absolute;
       z-index: 5;
       left: 17.77778%;
-      top: 17.03704%;
+      top: 0;
       width: 62.11111%; }
       @media screen and (max-width: 768px) {
         .b-steps__img--background {
@@ -131,7 +141,7 @@ body {
       position: absolute;
       z-index: 0;
       left: 18.11111%;
-      top: 69.62025%;
+      top: 63%;
       width: 63.88889%; }
       @media screen and (max-width: 768px) {
         .b-steps__img--line {
@@ -155,7 +165,7 @@ body {
     @media screen and (max-width: 768px) {
       .b-steps__link {
         font-size: 5vw;
-        padding: 20px 5px 20px 5px; } }
+        padding: 20px 22px 20px 5px; } }
 
 .b-additional-info {
   position: absolute;
@@ -237,7 +247,7 @@ body {
 
 .small-text {
   font-family: "Ukrainian", sans-serif;
-  font-size: 1.52vh; }
+  font-size: 0.52vw; }
   @media screen and (max-width: 768px) {
     .small-text {
       font-size: 3.13vw;
@@ -256,3 +266,7 @@ body {
   @media screen and (max-width: 768px) {
     .mobile-visible {
       display: block; } }
+
+.canvas-element {
+  position: absolute;
+  z-index: 2; }

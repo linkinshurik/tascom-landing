@@ -21,8 +21,9 @@ body
     background: url('../img/stars.png'), url('../img/layer-3.png') 100% 100% no-repeat
 .b-left-block
   position: absolute
-  width: 100/1920*465*1%
-  top: 100/1080*50*1%
+  width: 24.21%
+  bottom: 4.62%
+  top: 4%
   left: -2%
   //@media screen and (max-width: 1320px)
   //  left: -2%
@@ -36,11 +37,21 @@ body
   //  left: -13%
   @media screen and (max-width: $break-small)
     left: -19%
-    top: 10%
-    width: 40%
+    top: 5%
+    width: 49%
+    bottom: auto
+    padding-top: 100%
+
+    //left: -19%
+    //top: 10%
+    //width: 40%
 
   &__tree
-    width: 110%
+    height: 100%
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
 
 .b-right-block
   position: absolute
@@ -64,11 +75,12 @@ body
 
 .b-center-block
   position: absolute
-  top: 100/1080*78*1%
+  top: 20%
   right: 100/1920*550*1%
   left: 100/1920*465*1%
   @media screen and (max-width: $break-small)
     top: 26%
+    padding-top: 11%
     position: relative
     left: 10%
     width: 80%
@@ -86,10 +98,12 @@ body
   text-align: center
   font-family: "Ukrainian", sans-serif
   font-size: 2.66vw
-  margin-top: 0
+  margin: 0
+  padding-top: 61px
   @media screen and (max-width: $break-small)
     font-size: 7.1vw
     padding-top: 20%
+    position: relative
 
 .b-steps
   overflow: auto
@@ -129,7 +143,7 @@ body
       position: absolute
       z-index: 5
       left: 100/900*160*1%
-      top: 100/1080*184*1%
+      top: 0 //100/1080*184*1%
       width: 100/900*559*1%
       @media screen and (max-width: $break-small)
         display: none
@@ -137,7 +151,7 @@ body
         position: absolute
         z-index: 0
         left: 100/900*163*1%
-        top: 100/632*440*1%
+        top: 63% //100/632*440*1%
         width: 100/900*575*1%
         @media screen and (max-width: $break-small)
           display: none
@@ -161,7 +175,7 @@ body
     margin-left: 3%
     @media screen and (max-width: $break-small)
       font-size: 5vw
-      padding: 20px 5px 20px 5px
+      padding: 20px 22px 20px 5px
 
 .b-additional-info
   position: absolute
@@ -237,7 +251,7 @@ body
 
 .small-text
   font-family: "Ukrainian", sans-serif
-  font-size: 1.52vh
+  font-size: 0.52vw
   @media screen and (max-width: $break-small)
     font-size: 3.13vw
     line-height: 6.25vw
@@ -253,3 +267,6 @@ body
   display: none
   @media screen and (max-width: $break-small)
     display: block
+.canvas-element
+  position: absolute
+  z-index: 2
