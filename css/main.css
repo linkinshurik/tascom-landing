@@ -137,6 +137,7 @@ body {
       @media screen and (max-width: 768px) {
         .b-steps__img--background {
           display: none; } }
+
     .b-steps__img--line {
       position: absolute;
       z-index: 0;
