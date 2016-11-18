@@ -1,13 +1,13 @@
 {
-  "name": "website",
+  "name": "tascom-landing",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "dependencies": {
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

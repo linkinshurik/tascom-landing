@@ -9,8 +9,9 @@
 </head>
 <body>
 
-<script src="jquery-ab8e840c3dad7ccf2deadb8c40d53bdb.js"></script>
-<script src="three.js"></script><script src="snow.js"></script>
+<script src="js/jquery-ab8e840c3dad7ccf2deadb8c40d53bdb.js"></script>
+<script src="js/three.js"></script>
+<script src="js/snow.js"></script>
 
 <script>
     if (document.location.search.match(/type=embed/gi)) {
@@ -62,7 +63,9 @@
 
             renderer = new THREE.CanvasRenderer();
             renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
-            var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
+            var material = new THREE.ParticleBasicMaterial(
+                { map: new THREE.Texture(particleImage) } 
+            );
 
             for (var i = 0; i < 1000; i++) {
 
@@ -78,41 +81,41 @@
 
             container.appendChild( renderer.domElement );
 
-//            document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-//            document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-//            document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+           document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+           document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+           document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 
             setInterval( loop, 1000 / 60 );
 
         }
 
-//        function onDocumentMouseMove( event ) {
-//
-//            mouseX = event.clientX - windowHalfX;
-//            mouseY = event.clientY - windowHalfY;
-//        }
-//
-//        function onDocumentTouchStart( event ) {
-//
-//            if ( event.touches.length == 1 ) {
-//
-//                event.preventDefault();
-//
-//                mouseX = event.touches[ 0 ].pageX - windowHalfX;
-//                mouseY = event.touches[ 0 ].pageY - windowHalfY;
-//            }
-//        }
-//
-//        function onDocumentTouchMove( event ) {
-//
-//            if ( event.touches.length == 1 ) {
-//
-//                event.preventDefault();
-//
-//                mouseX = event.touches[ 0 ].pageX - windowHalfX;
-//                mouseY = event.touches[ 0 ].pageY - windowHalfY;
-//            }
-//        }
+       function onDocumentMouseMove( event ) {
+
+           mouseX = event.clientX - windowHalfX;
+           mouseY = event.clientY - windowHalfY;
+       }
+
+       function onDocumentTouchStart( event ) {
+
+           if ( event.touches.length == 1 ) {
+
+               event.preventDefault();
+
+               mouseX = event.touches[ 0 ].pageX - windowHalfX;
+               mouseY = event.touches[ 0 ].pageY - windowHalfY;
+           }
+       }
+
+       function onDocumentTouchMove( event ) {
+
+           if ( event.touches.length == 1 ) {
+
+               event.preventDefault();
+
+               mouseX = event.touches[ 0 ].pageX - windowHalfX;
+               mouseY = event.touches[ 0 ].pageY - windowHalfY;
+           }
+       }
 
         function loop() {
 
@@ -139,6 +142,27 @@
         init();
     }
 
+    document.onreadystatechange = function () {
+        var tree = document.querySelector('.js-tree');
+
+        tree.onload = function () {
+            var svg = tree.contentDocument.querySelector('svg');
+            var sparkleArr = svg.querySelectorAll('.sparkle');
+
+            setInterval(function () {
+                var r = getRandomInt(0, 7);
+                sparkleArr[r].classList.add('sparkle-animate');
+
+                setTimeout(function () {
+                    sparkleArr[r].classList.remove('sparkle-animate');
+                }, 3000);
+            }, 2000);
+        }
+    };
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     //@ sourceURL=pen.js
 </script>
@@ -151,40 +175,43 @@
 
 
     <div class="b-left-block js-left-block">
-        <object class="b-left-block__tree"><embed src="./img/fir-tree.svg"></object>
+        <object class="b-left-block__tree js-tree"
+                type="image/svg+xml"
+                data="./img/fir-tree.svg">
+        </object>
     </div>
     <img class="b-center-block__logo" src="./img/tascombank-logo.png">
     <h3 class="header-text">СВЯТО ДЕПОЗИТНИХ ВІДСОТКІВ</h3>
     <div class="b-center-block js-center-block">
-
-        <div class="b-bonus">
-            <img class="b-bonus__img" src="img/shape-2.png">
-            <p class="b-bonus__text">ДАРУЄМО КОЖНОМУ!</p>
-        </div>
-        <div class="b-steps">
-            <div class="b-steps__item">
-                <img class="b-steps__img" src="img/10-layers.png">
-                <p class="b-steps__text">Прийдіть до відділення</p>
-                <a class="b-steps__link" >Мапа відділень</a>
+        <div class="b-center-block__in">
+            <div class="b-bonus clearfix">
+                <img class="b-bonus__img" src="img/shape-2.png">
+                <p class="b-bonus__text">ДАРУЄМО КОЖНОМУ!</p>
             </div>
-            <div class="b-steps__item">
-                <img class="b-steps__img desktop-visible desktop-hidden" src="img/vector-smart-object2.png">
-                <img class="b-steps__img b-steps__img--wider mobile-visible " src="img/mobile-box.png">
-                <img class="b-steps__img--background desktop-visible" src="./img/shine.png">
-                <img class="b-steps__img--line" src="./img/line.png">
-                <p class="b-steps__text">Отримайте картку З бонусом до своєї ставки</p>
-            </div>
-            <div class="b-steps__item">
-                <img class="b-steps__img" src="img/deposit.png">
-                <p class="b-steps__text">Оформіть депозит з підвищеною відсотковою ставкою</p>
+            <div class="b-steps clearfix">
+                <div class="b-steps__item">
+                    <img class="b-steps__img" src="img/10-layers.png">
+                    <p class="b-steps__text">Прийдіть до відділення</p>
+                    <a class="b-steps__link" >Мапа відділень</a>
+                </div>
+                <div class="b-steps__item">
+                    <img class="b-steps__img desktop-visible desktop-hidden" src="img/vector-smart-object2.png">
+                    <img class="b-steps__img b-steps__img--wider mobile-visible " src="img/mobile-box.png">
+                    <img class="b-steps__img--background desktop-visible" src="./img/shine.png">
+                    <img class="b-steps__img--line" src="./img/line.png">
+                    <p class="b-steps__text">Отримайте картку З бонусом до своєї ставки</p>
+                </div>
+                <div class="b-steps__item">
+                    <img class="b-steps__img" src="img/deposit.png">
+                    <p class="b-steps__text">Оформіть депозит з підвищеною відсотковою ставкою</p>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="b-additional-info js-additional-block">
         <div class="b-phone">
-            <img class="b-phone__img" src="./img/phone.png">
-            <p class="b-phone__number">0 (800) 503 580</p>
+            <a class="b-phone__number" href="tel:0800503580">0 (800) 503 580</a>
             <p class="b-phone__free-call">Безкоштовно в межах України</p>
         </div>
         <div class="b-additional-info__text">

@@ -15,6 +15,7 @@ body, html {
   min-width: 100%;
   min-height: 100%;
   line-height: 1;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: none;
@@ -127,6 +128,12 @@ input[type=number] {
     -webkit-appearance: none;
     margin: 0; }
 
+.clearfix:after {
+  content: '';
+  display: table;
+  overflow: hidden;
+  clear: both; }
+
 @font-face {
   font-family: Ukrainian;
   src: url("../fonts/UkrainianFreeSet - Normal.ttf"); }
@@ -137,7 +144,8 @@ body {
 .b-fullwidth {
   position: absolute;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
   @media screen and (max-width: 768px) {
     .b-fullwidth {
       position: relative;
@@ -145,7 +153,8 @@ body {
       background-size: cover; } }
   @media screen and (min-width: 768px) {
     .b-fullwidth {
-      background: url("../img/stars.png"), url("../img/layer-3.png") 100% 100% no-repeat; } }
+      background: url("../img/stars.png"), url("../img/layer-3.png") 100% 100% no-repeat;
+      background-size: cover; } }
 
 .b-left-block {
   position: absolute;
@@ -173,8 +182,7 @@ body {
   top: 0;
   bottom: 0;
   right: 0;
-  background: url("../img/tree-copy.png") 100% 100% no-repeat;
-  background-position: 0 100%;
+  background: url("../img/tree-copy.png") 0 100% no-repeat;
   background-size: cover; }
   @media screen and (max-width: 768px) {
     .b-right-block {
@@ -192,9 +200,20 @@ body {
 
 .b-center-block {
   position: absolute;
-  top: 20%;
-  right: 28.64583%;
-  left: 24.21875%; }
+  top: 15%;
+  right: 24.21875%;
+  left: 24.21875%;
+  bottom: 28%; }
+  .b-center-block__in {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%); }
+    @media screen and (max-width: 768px) {
+      .b-center-block__in {
+        position: static;
+        transform: translate(0, 0); } }
   @media screen and (max-width: 768px) {
     .b-center-block {
       top: 26%;
@@ -225,10 +244,13 @@ body {
       position: relative; } }
 
 .b-steps {
-  padding-top: 9.25926%; }
+  position: relative;
+  margin-top: 9.25926%; }
   .b-steps__item {
     float: left;
     vertical-align: top;
+    box-sizing: border-box;
+    padding: 0 1%;
     width: 33.3%; }
     @media screen and (max-width: 768px) {
       .b-steps__item {
@@ -236,9 +258,11 @@ body {
         float: none;
         width: 100%; } }
   .b-steps__text {
+    margin: 17px 0 10px;
     text-align: center;
     font-family: "Ukrainian", sans-serif;
-    font-size: 1.04vw;
+    line-height: 1.9vh;
+    font-size: 1.5vh;
     font-weight: bold;
     color: #001e61;
     text-transform: uppercase; }
@@ -246,7 +270,8 @@ body {
       .b-steps__text {
         padding-bottom: 20px;
         padding-top: 20px;
-        font-size: 5vw; } }
+        font-size: 5vw;
+        line-height: 5.1vh; } }
   .b-steps__img {
     position: relative;
     width: 33.33333%;
@@ -262,8 +287,9 @@ body {
       position: absolute;
       z-index: 5;
       left: 17.77778%;
-      top: 0;
-      width: 62.11111%; }
+      bottom: 100%;
+      width: 62.11111%;
+      margin-bottom: -15px; }
       @media screen and (max-width: 768px) {
         .b-steps__img--background {
           display: none; } }
@@ -271,7 +297,7 @@ body {
       position: absolute;
       z-index: 0;
       left: 18.11111%;
-      top: 63%;
+      top: 18%;
       width: 63.88889%; }
       @media screen and (max-width: 768px) {
         .b-steps__img--line {
@@ -306,7 +332,7 @@ body {
 .b-additional-info {
   position: absolute;
   left: 25.3125%;
-  right: 27.8125%;
+  right: 25.3125%;
   bottom: 5.55556%; }
   @media screen and (max-width: 768px) {
     .b-additional-info {
@@ -314,37 +340,38 @@ body {
       left: 7.8125px;
       width: 95%; } }
   .b-additional-info__link {
+    display: block;
+    margin-top: 15px;
     font-family: "Ukrainian", sans-serif;
-    font-size: 0.73vw;
+    font-size: 0.9vw;
     text-decoration: underline;
     text-align: center;
-    padding-left: 33.14815%;
-    color: #231f20; }
+    color: #21285d; }
     @media screen and (max-width: 768px) {
       .b-additional-info__link {
         font-size: 4.38vw;
-        padding-left: 5%; } }
+        padding-left: 5%;
+        margin-bottom: 30px; } }
 
 .b-bonus {
-  overflow: auto; }
+  position: relative;
+  z-index: 6; }
   .b-bonus__img {
-    position: relative;
     padding-left: 19.44444%;
+    padding-right: 2%;
     width: 34.33333%;
-    float: left;
-    z-index: 6; }
+    vertical-align: middle; }
     @media screen and (max-width: 768px) {
       .b-bonus__img {
         width: 46.53846%;
         padding-left: 6.25%; } }
   .b-bonus__text {
-    padding-right: 17.33333%;
     font-size: 2.29vw;
-    line-height: 2.92vw;
+    line-height: 3.5vw;
     font-family: "Ukrainian", sans-serif;
     width: 26.77778%;
-    float: right;
-    z-index: 3; }
+    display: inline-block;
+    vertical-align: middle; }
     @media screen and (max-width: 768px) {
       .b-bonus__text {
         font-size: 5.31vw;
@@ -352,23 +379,26 @@ body {
         margin: 1%; } }
 
 .b-phone__number {
+  display: block;
   vertical-align: top;
-  margin: 0;
   font-family: "Ukrainian", sans-serif;
   font-weight: bold;
   color: #21285d;
-  font-size: 2.19vw;
-  padding-left: 10%;
-  padding-bottom: 1%; }
+  font-size: 30px;
+  padding-left: 50px;
+  margin: 0 0 8px;
+  background: url("../img/phone.png") no-repeat 0 50%;
+  background-size: contain; }
   @media screen and (max-width: 768px) {
     .b-phone__number {
       font-size: 9vw;
-      letter-spacing: 1vw; } }
+      letter-spacing: 1vw;
+      padding-left: 11%; } }
 
 .b-phone__free-call {
   font-family: "Ukrainian", sans-serif;
-  letter-spacing: 0.36vw;
-  font-size: 0.73vw;
+  letter-spacing: 3px;
+  font-size: 13px;
   margin: 0;
   text-align: justify;
   color: #21285d;
@@ -378,16 +408,10 @@ body {
       font-size: 3.13vw;
       letter-spacing: 1.7vw; } }
 
-.b-phone__img {
-  float: left;
-  width: 2.3vw; }
-  @media screen and (max-width: 768px) {
-    .b-phone__img {
-      width: 9.3vw; } }
-
 .small-text {
   font-family: "Ukrainian", sans-serif;
-  font-size: 1.52vh; }
+  line-height: 1.8vh;
+  font-size: 1.3vh; }
   @media screen and (max-width: 768px) {
     .small-text {
       font-size: 3.13vw;
@@ -411,3 +435,26 @@ body {
   position: absolute;
   z-index: 2;
   pointer-events: none; }
+
+.sparkle-animate {
+  transform-origin: 50% 50%;
+  animation: sparkle-keyframe 3s ease-in-out; }
+  .sparkle-animate > g {
+    transform-origin: 50% 50%;
+    animation: sparkle-light-keyframe 3s ease-in-out; }
+
+@keyframes sparkle-light-keyframe {
+  0% {
+    transform: rotate(0deg); }
+  80% {
+    transform: rotate(180deg); } }
+
+@keyframes sparkle-keyframe {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg); } }

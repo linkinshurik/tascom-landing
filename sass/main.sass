@@ -14,12 +14,16 @@ body
   position: absolute
   width: 100%
   height: 100%
+  overflow: hidden
+  
   @media screen and (max-width: $break-small)
     position: relative
     background: url('../img/mobile-bg.png'), url('../img/mobile-stars.png') 100% 100% no-repeat
     background-size: cover
+    
   @media screen and (min-width: $break-small)
     background: url('../img/stars.png'), url('../img/layer-3.png') 100% 100% no-repeat
+    background-size: cover
 
 .b-left-block
   position: absolute
@@ -61,26 +65,41 @@ body
   top: 0
   bottom: 0
   right: 0
-  background: url('../img/tree-copy.png') 100% 100% no-repeat
-  background-position: 0 100%
+  background: url('../img/tree-copy.png') 0 100% no-repeat
   background-size: cover
+  
   @media screen and (max-width: $break-small)
     width: 100/320*220*1%
     background: url('../img/tree-copy-mobile.png') no-repeat
     background-size: contain
+    
   &__logo
     position: absolute
     top: 100/1080*60*1%
     right: 100/500*60*1%
     width: 160px
+    
     @media screen and (max-width: $break-small)
       display: none
 
 .b-center-block
   position: absolute
-  top: 20%
-  right: 100/1920*550*1%
-  left: 100/1920*465*1%
+  top: 15%
+  right: 100 / 1920 * 465 *1%
+  left: 100 / 1920 * 465 *1%
+  bottom: 28%
+  
+  &__in
+    position: absolute
+    top: 50%
+    left: 0
+    right: 0
+    transform: translate(0, -50%)
+  
+    @media screen and (max-width: $break-small)
+      position: static
+      transform: translate(0, 0)
+  
   @media screen and (max-width: $break-small)
     top: 26%
     padding-top: 11%
@@ -103,18 +122,23 @@ body
   font-size: 2.66vw
   margin: 0
   padding-top: 61px
+  
   @media screen and (max-width: $break-small)
     font-size: 7.1vw
     padding-top: 20%
     position: relative
 
 .b-steps
-  padding-top: 100/1080*100*1%
+  position: relative
+  margin-top: 100 / 1080 * 100 * 1%
 
   &__item
     float: left
     vertical-align: top
+    box-sizing: border-box
+    padding: 0 1% 
     width: 33.3%
+    
     @media screen and (max-width: $break-small)
       padding-top: 10%
       float: none
@@ -122,23 +146,30 @@ body
 
 
   &__text
+    margin: 17px 0 10px
     text-align: center
     font-family: "Ukrainian", sans-serif
-    font-size: 1.04vw
+    line-height: 1.9vh
+    font-size: 1.5vh
     font-weight: bold
     color: #001e61
     text-transform: uppercase
+    
     @media screen and (max-width: $break-small)
       padding-bottom: 20px
       padding-top: 20px
       font-size: 5vw
+      line-height: 5.1vh
+      
   &__img
     position: relative
     width: 100/300*100*1%
     padding-left: 100/330*100*1%
     z-index: 2
+    
     @media screen and (max-width: $break-small)
       padding-left: 100/300*100*1%
+      
     &--wider
       width: 100/320*177*1%
       padding-left: 100/260*60*1%
@@ -147,16 +178,20 @@ body
       position: absolute
       z-index: 5
       left: 100/900*160*1%
-      top: 0 //100/1080*184*1%
+      bottom: 100%
       width: 100/900*559*1%
+      margin-bottom: -15px  
+      
       @media screen and (max-width: $break-small)
         display: none
+        
     &--line
         position: absolute
         z-index: 0
         left: 100/900*163*1%
-        top: 63% //100/632*440*1%
+        top: 18% //100/632*440*1%
         width: 100/900*575*1%
+        
         @media screen and (max-width: $break-small)
           display: none
 
@@ -189,44 +224,51 @@ body
 
 .b-additional-info
   position: absolute
-  left: 100/1920*486*1%
-  right: 100/1920*534*1%
-  bottom: 100/1080*60*1%
+  left: 100 / 1920 * 486 * 1%
+  right: 100 / 1920 * 486 * 1%
+  bottom: 100 / 1080 * 60 * 1%
+  
   @media screen and (max-width: $break-small)
     position: relative
     left: 100/320*25*1px
     width: 95%
 
   &__link
+    display: block
+    margin-top: 15px
     font-family: "Ukrainian", sans-serif
-    font-size: 0.73vw
+    font-size: 0.9vw
     text-decoration: underline
     text-align: center
-    padding-left: 100/1080*358*1%
-    color: #231f20
+    color: #21285d
+    
     @media screen and (max-width: $break-small)
       font-size: 4.38vw
       padding-left: 5%
+      margin-bottom: 30px
 
 .b-bonus
-  overflow: auto
+  position: relative
+  z-index: 6  
+
   &__img
-    position: relative
     padding-left: 100/900*175*1%
+    padding-right: 2%
     width: 100/900*309*1%
-    float: left
-    z-index: 6
+    vertical-align: middle
+    
     @media screen and (max-width: $break-small)
       width: 100/260*121*1%
       padding-left: 100/320*20*1%
+      
   &__text
-    padding-right: 100/900*156*1%
     font-size: 2.29vw
-    line-height: 2.92vw
+    line-height: 3.5vw
     font-family: "Ukrainian", sans-serif
     width: 100/900*241*1%
-    float: right
-    z-index: 3
+    display: inline-block
+    vertical-align: middle
+    
     @media screen and (max-width: $break-small)
       font-size: 5.31vw
       line-height: 6.88vw
@@ -234,38 +276,46 @@ body
 
 .b-phone
   &__number
+    display: block
     vertical-align: top
-    margin: 0
     font-family: "Ukrainian", sans-serif
     font-weight: bold
     color: #21285d
-    font-size: 2.19vw
-    padding-left: 100/300*30*1%
-    padding-bottom: 1%
+    font-size: 30px
+    padding-left: 50px
+    margin: 0 0 8px
+    background: url("../img/phone.png") no-repeat 0 50%
+    background-size: contain 
+     
     @media screen and (max-width: $break-small)
       font-size: 9vw
       letter-spacing: 1vw
+      padding-left: 11%
+      
   &__free-call
     font-family: "Ukrainian", sans-serif
-    letter-spacing: 0.36vw
-    font-size: 0.73vw
+    letter-spacing: 3px
+    font-size: 13px
     margin: 0
     text-align: justify
     color: #21285d
     padding-bottom: 3%
+    
     @media screen and (max-width: $break-small)
       font-size: 3.13vw
       letter-spacing: 1.7vw
 
-  &__img
-    float: left
-    width: 2.3vw
-    @media screen and (max-width: $break-small)
-      width: 9.3vw
+  // &__img
+    // float: left
+    // width: 2.3vw
+    // @media screen and (max-width: $break-small)
+    //   width: 9.3vw
 
 .small-text
   font-family: "Ukrainian", sans-serif
-  font-size: 1.52vh
+  line-height: 1.8vh
+  font-size: 1.3vh
+  
   @media screen and (max-width: $break-small)
     font-size: 3.13vw
     line-height: 6.25vw
@@ -274,14 +324,45 @@ body
 
 .desktop-hidden
   display: block
+  
   @media screen and (max-width: $break-small)
     display: none
 
 .mobile-visible
   display: none
+  
   @media screen and (max-width: $break-small)
     display: block
+    
 .canvas-element
   position: absolute
   z-index: 2
   pointer-events: none
+
+
+.sparkle-animate
+  transform-origin: 50% 50%
+  animation: sparkle-keyframe 3s ease-in-out
+
+  > g
+    transform-origin: 50% 50%
+    animation: sparkle-light-keyframe 3s ease-in-out
+
+@keyframes sparkle-light-keyframe
+  0%
+    transform: rotate(0deg)
+
+  80%
+    transform: rotate(180deg)
+
+@keyframes sparkle-keyframe
+  0%
+    opacity: 0
+    transform: rotate(-45deg)
+
+  50%
+    opacity: 1
+
+  100%
+    opacity: 0
+    transform: rotate(45deg)
