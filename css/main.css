@@ -139,7 +139,11 @@ input[type=number] {
   src: url("../fonts/UkrainianFreeSet - Normal.ttf"); }
 
 body {
-  margin: 0; }
+  margin: 0;
+  overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    body {
+      overflow-y: auto; } }
 
 .b-fullwidth {
   position: absolute;
@@ -149,11 +153,11 @@ body {
   @media screen and (max-width: 768px) {
     .b-fullwidth {
       position: relative;
-      background: url("../img/mobile-bg.png"), url("../img/mobile-stars.png") 100% 100% no-repeat;
+      background: url("../img/mobile-bg.jpg"), url("../img/mobile-stars.png") 100% 100% no-repeat;
       background-size: cover; } }
   @media screen and (min-width: 768px) {
     .b-fullwidth {
-      background: url("../img/stars.png"), url("../img/layer-3.png") 100% 100% no-repeat;
+      background: url("../img/stars.png"), url("../img/layer-3.jpg") 100% 100% no-repeat;
       background-size: cover; } }
 
 .b-left-block {
