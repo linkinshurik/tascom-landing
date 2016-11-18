@@ -1,4 +1,6 @@
-$break-small : 768px
+//@import "_reset.sass"
+
+$break-small : 908px
 
 @font-face
   font-family: Ukrainian
@@ -173,6 +175,8 @@ body
     text-decoration: none
     padding: 10px 5px 10px 5px
     margin-left: 3%
+    :hover
+      background-color: #ffc446
     @media screen and (max-width: $break-small)
       font-size: 5vw
       padding: 20px 22px 20px 5px
@@ -185,6 +189,7 @@ body
   @media screen and (max-width: $break-small)
     position: relative
     left: 100/320*25*1px
+    width: 95%
 
   &__link
     font-family: "Ukrainian", sans-serif
@@ -251,7 +256,7 @@ body
 
 .small-text
   font-family: "Ukrainian", sans-serif
-  font-size: 0.52vw
+  font-size: 1.52vh
   @media screen and (max-width: $break-small)
     font-size: 3.13vw
     line-height: 6.25vw

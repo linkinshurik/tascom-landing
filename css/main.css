@@ -9,12 +9,12 @@ body {
   position: absolute;
   width: 100%;
   height: 100%; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .b-fullwidth {
       position: relative;
       background: url("../img/mobile-bg.png"), url("../img/mobile-stars.png") 100% 100% no-repeat;
       background-size: cover; } }
-  @media screen and (min-width: 910px) {
+  @media screen and (min-width: 908px) {
     .b-fullwidth {
       background: url("../img/stars.png"), url("../img/layer-3.png") 100% 100% no-repeat; } }
 
@@ -24,7 +24,7 @@ body {
   bottom: 4.62%;
   top: 4%;
   left: -2%; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .b-left-block {
       left: -19%;
       top: 5%;
@@ -47,7 +47,7 @@ body {
   background: url("../img/tree-copy.png") 100% 100% no-repeat;
   background-position: 0 100%;
   background-size: cover; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .b-right-block {
       width: 68.75%;
       background: url("../img/tree-copy-mobile.png") no-repeat;
@@ -56,7 +56,7 @@ body {
     position: absolute;
     top: 5.55556%;
     right: 12%; }
-    @media screen and (max-width: 910px) {
+    @media screen and (max-width: 908px) {
       .b-right-block__logo {
         display: none; } }
 
@@ -65,7 +65,7 @@ body {
   top: 20%;
   right: 28.64583%;
   left: 24.21875%; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .b-center-block {
       top: 26%;
       padding-top: 11%;
@@ -75,7 +75,7 @@ body {
       z-index: 5; } }
   .b-center-block__logo {
     display: none; }
-    @media screen and (max-width: 910px) {
+    @media screen and (max-width: 908px) {
       .b-center-block__logo {
         display: block;
         padding-top: 10%;
@@ -88,7 +88,7 @@ body {
   font-size: 2.66vw;
   margin: 0;
   padding-top: 61px; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .header-text {
       font-size: 7.1vw;
       padding-top: 20%;
@@ -101,7 +101,7 @@ body {
     float: left;
     vertical-align: top;
     width: 33.3%; }
-    @media screen and (max-width: 910px) {
+    @media screen and (max-width: 908px) {
       .b-steps__item {
         padding-top: 10%;
         float: none;
@@ -113,7 +113,7 @@ body {
     font-weight: bold;
     color: #001e61;
     text-transform: uppercase; }
-    @media screen and (max-width: 910px) {
+    @media screen and (max-width: 908px) {
       .b-steps__text {
         font-size: 5vw; } }
   .b-steps__img {
@@ -121,7 +121,7 @@ body {
     width: 33.33333%;
     padding-left: 30.30303%;
     z-index: 2; }
-    @media screen and (max-width: 910px) {
+    @media screen and (max-width: 908px) {
       .b-steps__img {
         padding-left: 33.33333%; } }
     .b-steps__img--wider {
@@ -133,7 +133,7 @@ body {
       left: 17.77778%;
       top: 0;
       width: 62.11111%; }
-      @media screen and (max-width: 910px) {
+      @media screen and (max-width: 908px) {
         .b-steps__img--background {
           display: none; } }
     .b-steps__img--line {
@@ -142,7 +142,7 @@ body {
       left: 18.11111%;
       top: 63%;
       width: 63.88889%; }
-      @media screen and (max-width: 910px) {
+      @media screen and (max-width: 908px) {
         .b-steps__img--line {
           display: none; } }
   .b-steps__link {
@@ -161,7 +161,9 @@ body {
     text-decoration: none;
     padding: 10px 5px 10px 5px;
     margin-left: 3%; }
-    @media screen and (max-width: 910px) {
+    .b-steps__link :hover {
+      background-color: #ffc446; }
+    @media screen and (max-width: 908px) {
       .b-steps__link {
         font-size: 5vw;
         padding: 20px 22px 20px 5px; } }
@@ -171,17 +173,18 @@ body {
   left: 25.3125%;
   right: 27.8125%;
   bottom: 5.55556%; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .b-additional-info {
       position: relative;
-      left: 7.8125px; } }
+      left: 7.8125px;
+      width: 95%; } }
   .b-additional-info__link {
     font-family: "Ukrainian", sans-serif;
     font-size: 0.73vw;
     text-decoration: underline;
     text-align: center;
     padding-left: 33.14815%; }
-    @media screen and (max-width: 910px) {
+    @media screen and (max-width: 908px) {
       .b-additional-info__link {
         font-size: 4.38vw;
         padding-left: 5%; } }
@@ -194,7 +197,7 @@ body {
     width: 34.33333%;
     float: left;
     z-index: 6; }
-    @media screen and (max-width: 910px) {
+    @media screen and (max-width: 908px) {
       .b-bonus__img {
         width: 46.53846%;
         padding-left: 6.25%; } }
@@ -206,7 +209,7 @@ body {
     width: 26.77778%;
     float: right;
     z-index: 3; }
-    @media screen and (max-width: 910px) {
+    @media screen and (max-width: 908px) {
       .b-bonus__text {
         font-size: 5.31vw;
         line-height: 6.88vw;
@@ -220,7 +223,7 @@ body {
   color: #21285d;
   font-size: 2.19vw;
   padding-left: 10%; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .b-phone__number {
       font-size: 9vw;
       letter-spacing: 1vw; } }
@@ -232,7 +235,7 @@ body {
   margin: 0;
   text-align: justify;
   color: #21285d; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .b-phone__free-call {
       font-size: 3.13vw;
       letter-spacing: 1.7vw; } }
@@ -240,14 +243,14 @@ body {
 .b-phone__img {
   float: left;
   width: 2.3vw; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .b-phone__img {
       width: 9.3vw; } }
 
 .small-text {
   font-family: "Ukrainian", sans-serif;
-  font-size: 0.52vw; }
-  @media screen and (max-width: 910px) {
+  font-size: 1.52vh; }
+  @media screen and (max-width: 908px) {
     .small-text {
       font-size: 3.13vw;
       line-height: 6.25vw;
@@ -256,13 +259,13 @@ body {
 
 .desktop-hidden {
   display: block; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .desktop-hidden {
       display: none; } }
 
 .mobile-visible {
   display: none; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 908px) {
     .mobile-visible {
       display: block; } }
 
