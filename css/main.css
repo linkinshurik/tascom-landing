@@ -277,16 +277,17 @@ body {
         font-size: 5vw;
         line-height: 5.1vh; } }
   .b-steps__img {
+    height: 60px;
     position: relative;
-    width: 33.33333%;
-    padding-left: 30.30303%;
-    z-index: 2; }
+    margin: 0 auto;
+    width: auto;
+    z-index: 2;
+    display: block; }
     @media screen and (max-width: 768px) {
       .b-steps__img {
-        padding-left: 33.33333%; } }
+        height: 120px; } }
     .b-steps__img--wider {
-      width: 55.3125%;
-      padding-left: 23.07692%; }
+      height: 180px; }
     .b-steps__img--background {
       position: absolute;
       z-index: 5;
@@ -395,9 +396,11 @@ body {
   background-size: contain; }
   @media screen and (max-width: 768px) {
     .b-phone__number {
-      font-size: 9vw;
+      background: url("../img/phone.png") no-repeat 9% 50%;
+      font-size: 7vw;
       letter-spacing: 1vw;
-      padding-left: 11%; } }
+      padding-left: 11%;
+      text-align: center; } }
 
 .b-phone__free-call {
   font-family: "Ukrainian", sans-serif;
@@ -409,8 +412,9 @@ body {
   padding-bottom: 3%; }
   @media screen and (max-width: 768px) {
     .b-phone__free-call {
-      font-size: 3.13vw;
-      letter-spacing: 1.7vw; } }
+      font-size: 2.13vw;
+      letter-spacing: 1.7vw;
+      text-align: center; } }
 
 .small-text {
   font-family: "Ukrainian", sans-serif;

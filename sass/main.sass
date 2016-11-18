@@ -21,11 +21,11 @@ body
   
   @media screen and (max-width: $break-small)
     position: relative
-    background: url('../img/mobile-bg.png'), url('../img/mobile-stars.png') 100% 100% no-repeat
+    background: url('../img/mobile-bg.jpg'), url('../img/mobile-stars.png') 100% 100% no-repeat
     background-size: cover
     
   @media screen and (min-width: $break-small)
-    background: url('../img/stars.png'), url('../img/layer-3.png') 100% 100% no-repeat
+    background: url('../img/stars.png'), url('../img/layer-3.jpg') 100% 100% no-repeat
     background-size: cover
 
 .b-left-block
@@ -165,17 +165,18 @@ body
       line-height: 5.1vh
       
   &__img
+    height: 60px
     position: relative
-    width: 100/300*100*1%
-    padding-left: 100/330*100*1%
+    margin: 0 auto
+    width: auto
     z-index: 2
-    
+    display: block
+
     @media screen and (max-width: $break-small)
-      padding-left: 100/300*100*1%
+      height: 120px
       
     &--wider
-      width: 100/320*177*1%
-      padding-left: 100/260*60*1%
+      height: 180px
 
     &--background
       position: absolute
@@ -288,12 +289,14 @@ body
     padding-left: 50px
     margin: 0 0 8px
     background: url("../img/phone.png") no-repeat 0 50%
-    background-size: contain 
-     
+    background-size: contain
+
     @media screen and (max-width: $break-small)
-      font-size: 9vw
+      background: url("../img/phone.png") no-repeat 9% 50%
+      font-size: 7vw
       letter-spacing: 1vw
       padding-left: 11%
+      text-align: center
       
   &__free-call
     font-family: "Ukrainian", sans-serif
@@ -303,10 +306,11 @@ body
     text-align: justify
     color: #21285d
     padding-bottom: 3%
-    
+
     @media screen and (max-width: $break-small)
-      font-size: 3.13vw
+      font-size: 2.13vw
       letter-spacing: 1.7vw
+      text-align: center
 
   // &__img
     // float: left
