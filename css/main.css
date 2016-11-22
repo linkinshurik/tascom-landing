@@ -407,7 +407,8 @@ body {
         font-size: 7vw;
         letter-spacing: 1vw;
         padding-left: 11%;
-        text-align: center; } }
+        text-align: center;
+        line-height: 30px; } }
   .b-phone__free-call {
     font-family: "Ukrainian", sans-serif;
     letter-spacing: 2.2px;
