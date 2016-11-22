@@ -67,7 +67,7 @@
                 { map: new THREE.Texture(particleImage) } 
             );
 
-            for (var i = 0; i < 700; i++) {
+            for (var i = 0; i < 400; i++) {
 
                 particle = new Particle3D( material);
                 particle.position.x = Math.random() * 2000 - 1000;
@@ -191,19 +191,21 @@
             <div class="b-steps clearfix">
                 <div class="b-steps__item">
                     <img class="b-steps__img" src="img/map.png">
-                    <p class="b-steps__text">Прийдіть до відділення</p>
-                    <a class="b-steps__link" href="http://www.tascombank.com.ua/component/option,com_tasmap/Itemid,143/lang,ukrainian/">Мапа відділень</a>
+                    <p class="b-steps__text"><span class="b-steps__text b-steps__text--large">Прийдіть</span><br> до відділення</p>
+                    <a class="b-steps__link" target="_blank" href="http://www.tascombank.com.ua/component/option,com_tasmap/Itemid,143/lang,ukrainian/">Мапа відділень</a>
                 </div>
                 <div class="b-steps__item">
                     <img class="b-steps__img desktop-visible desktop-hidden" src="img/box.png">
                     <img class="b-steps__img b-steps__img--wider mobile-visible " src="img/get-card-box-mobile.png">
                     <img class="b-steps__img--background desktop-visible" src="./img/shine.png">
                     <img class="b-steps__img--line" src="./img/line.png">
-                    <p class="b-steps__text">Отримайте картку З бонусом до своєї ставки</p>
+                    <p class="b-steps__text"><span class="b-steps__text b-steps__text--large">Отримайте</span><br>
+                        картку з бонусом до своєї ставки</p>
                 </div>
                 <div class="b-steps__item">
                     <img class="b-steps__img" src="img/deposit.png">
-                    <p class="b-steps__text">Оформіть депозит з підвищеною відсотковою ставкою</p>
+                    <p class="b-steps__text"><span class="b-steps__text b-steps__text--large">Оформіть</span><br>
+                        депозит з підвищеною відсотковою ставкою</p>
                 </div>
             </div>
         </div>
@@ -214,15 +216,20 @@
             <a class="b-phone__number" href="tel:0800503580">0 (800) 503 580</a>
             <p class="b-phone__free-call">Безкоштовно в межах України</p>
         </div>
+        <nav class="social">
+            <a href="https://www.facebook.com/tascombank" target="_blank"><img class="social__item" src="./img/fb.png"></a>
+            <a href="https://www.twitter.com/tascombank" target="_blank"><img class="social__item" src="./img/tw.png"></a>
+        </nav>
         <div class="b-additional-info__text">
-            <p class="small-text"> Акція діє з 21.11.2016 до 15.01.2017 року на всій території України. АТ «ТАСКОМБАНК» є учасником Фонду
-                гарантування вкладів фізичних осіб. Свідоцтво № 028 від 18 жовтня 2012 р. З 17.09.2012 розмір
-                гарантованої суми кожному вкладнику банку збільшено до 200 тис. гривень, включно з сумою відсотків.<br>
-                <small>1.</small> Під подарунком мається на увазі можливість отримати додаткові відсотки до 1,5% за депозитом
-                «Свято новорічних відсотків» згідно з умовами Акції.
-                Ліцензія НБУ № 84 від 25 жовтня 2011 року
+            <p class="small-text">
+                Акція діє з 21.11.2016 до 15.01.2017 року на всій території України , за виключенням АР Крим та
+                тимчасово окупованих територій. АТ «ТАСКОМБАНК» є учасником Фонду гарантування вкладів фізичних осіб.
+                Свідоцтво № 028 від 18 жовтня 2012 р. З 17.09.2012 розмір гарантованої суми кожному вкладнику банку
+                збільшено до 200 тис. гривень, включно з сумою відсотків.<br>
+                * Під подарунком мається на увазі можливість отримати додаткові відсотки до 1,5% за депозитом
+                «Свято новорічних відсотків» згідно з умовами акції. Ліцензія НБУ №84 від 25 жовтня 2011 року.
             </p>
-            <a class="b-additional-info__link" href="#">Офіційні правила акції «Свято депозитних відсотків»</a>
+            <a class="b-additional-info__link" target="_blank" href="#">Офіційні правила акції «Свято депозитних відсотків»</a>
         </div>
     </div>
 </div>

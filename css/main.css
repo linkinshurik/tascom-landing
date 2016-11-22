@@ -240,7 +240,7 @@ body {
   font-family: "Ukrainian", sans-serif;
   font-size: 2.66vw;
   margin: 0;
-  padding-top: 61px; }
+  padding-top: 38px; }
   @media screen and (max-width: 768px) {
     .header-text {
       font-size: 7.1vw;
@@ -249,7 +249,7 @@ body {
 
 .b-steps {
   position: relative;
-  margin-top: 9.25926%; }
+  margin-top: 6.48148%; }
   .b-steps__item {
     float: left;
     vertical-align: top;
@@ -265,11 +265,12 @@ body {
     margin: 17px 0 10px;
     text-align: center;
     font-family: "Ukrainian", sans-serif;
-    line-height: 1.9vh;
-    font-size: 1.5vh;
-    font-weight: bold;
-    color: #001e61;
-    text-transform: uppercase; }
+    line-height: 2.7vh;
+    font-size: 2vh;
+    color: #001e61; }
+    .b-steps__text--large {
+      text-transform: uppercase;
+      font-weight: bold; }
     @media screen and (max-width: 768px) {
       .b-steps__text {
         padding-bottom: 20px;
@@ -277,7 +278,7 @@ body {
         font-size: 5vw;
         line-height: 5.1vh; } }
   .b-steps__img {
-    height: 60px;
+    height: 80px;
     position: relative;
     margin: 0 auto;
     width: auto;
@@ -291,8 +292,8 @@ body {
     .b-steps__img--background {
       position: absolute;
       z-index: 5;
-      left: 17.77778%;
-      bottom: 100%;
+      left: 18.5%;
+      bottom: 90%;
       width: 62.11111%;
       margin-bottom: -15px; }
       @media screen and (max-width: 768px) {
@@ -338,7 +339,7 @@ body {
   position: absolute;
   left: 25.3125%;
   right: 25.3125%;
-  bottom: 5.55556%; }
+  bottom: 1.85185%; }
   @media screen and (max-width: 768px) {
     .b-additional-info {
       position: relative;
@@ -346,7 +347,7 @@ body {
       width: 95%; } }
   .b-additional-info__link {
     display: block;
-    margin-top: 15px;
+    margin-top: 10px;
     font-family: "Ukrainian", sans-serif;
     font-size: 0.9vw;
     text-decoration: underline;
@@ -383,43 +384,60 @@ body {
         line-height: 6.88vw;
         margin: 1%; } }
 
-.b-phone__number {
-  display: block;
-  vertical-align: top;
-  font-family: "Ukrainian", sans-serif;
-  font-weight: bold;
-  color: #21285d;
-  font-size: 30px;
-  padding-left: 50px;
-  margin: 0 0 8px;
-  background: url("../img/phone.png") no-repeat 0 50%;
-  background-size: contain; }
+.b-phone {
+  margin: auto;
+  width: 255px; }
   @media screen and (max-width: 768px) {
-    .b-phone__number {
-      background: url("../img/phone.png") no-repeat 9% 50%;
-      font-size: 7vw;
-      letter-spacing: 1vw;
-      padding-left: 11%;
-      text-align: center; } }
+    .b-phone {
+      width: auto; } }
+  .b-phone__number {
+    display: block;
+    vertical-align: top;
+    font-family: "Ukrainian", sans-serif;
+    font-weight: bold;
+    color: #21285d;
+    font-size: 27px;
+    padding-left: 38px;
+    margin: 0 0 8px;
+    background: url("../img/phone.png") no-repeat 0 50%;
+    background-size: contain; }
+    @media screen and (max-width: 768px) {
+      .b-phone__number {
+        background: url("../img/phone.png") no-repeat 9% 50%;
+        font-size: 7vw;
+        letter-spacing: 1vw;
+        padding-left: 11%;
+        text-align: center; } }
+  .b-phone__free-call {
+    font-family: "Ukrainian", sans-serif;
+    letter-spacing: 2.2px;
+    font-size: 12px;
+    margin: 0;
+    color: #21285d;
+    text-align: left;
+    padding-bottom: 1%; }
+    @media screen and (max-width: 768px) {
+      .b-phone__free-call {
+        font-size: 2.13vw;
+        letter-spacing: 1.7vw;
+        text-align: center; } }
 
-.b-phone__free-call {
-  font-family: "Ukrainian", sans-serif;
-  letter-spacing: 3px;
-  font-size: 13px;
-  margin: 0;
-  text-align: justify;
-  color: #21285d;
-  padding-bottom: 3%; }
+.social {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 2%; }
   @media screen and (max-width: 768px) {
-    .b-phone__free-call {
-      font-size: 2.13vw;
-      letter-spacing: 1.7vw;
-      text-align: center; } }
+    .social {
+      padding-top: 15px;
+      padding-bottom: 0; } }
+  .social__item {
+    width: 25px;
+    height: 25px; }
 
 .small-text {
   font-family: "Ukrainian", sans-serif;
-  line-height: 1.8vh;
-  font-size: 1.3vh; }
+  line-height: 1.7vh;
+  font-size: 1.2vh; }
   @media screen and (max-width: 768px) {
     .small-text {
       font-size: 3.13vw;
